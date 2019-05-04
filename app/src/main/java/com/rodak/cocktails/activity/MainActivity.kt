@@ -1,9 +1,10 @@
-package com.rodak.cocktails
+package com.rodak.cocktails.activity
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.TextView
+import com.rodak.cocktails.R
 
 class MainActivity : AppCompatActivity() {
 
