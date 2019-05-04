@@ -6,6 +6,7 @@ ext {
     def lifecycleVersion = '2.0.0'
     def roomVersion = '2.1.0-alpha07'
     def coroutinesVersion = '1.2.1'
+    def mockitoVersion = '1.10.19'
 
     koinDependencies = [
             rxJava: "org.koin:koin-android:${koinVersion}",
@@ -53,5 +54,9 @@ ext {
 
     glideAnnotation = [
             glide: "com.github.bumptech.glide:compiler:${glideVersion}"
+    ]
+
+    mockitoDependencies = [
+            mockito: "org.mockito:mockito-core:${mockitoVersion}"
     ]
 }
