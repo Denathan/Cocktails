@@ -47,6 +47,7 @@ dependencies {
     implementation roomDependencies.values()
     implementation coroutinesDependencies.values()
     implementation glideDependencies.values()
+    implementation coroutinesAdapterDependencies.values()
 
     testImplementation roomTestDependencies.values()
     testImplementation mockitoTestDependencies.values()
