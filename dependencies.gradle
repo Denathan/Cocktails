@@ -5,6 +5,7 @@ ext {
     def glideVersion = '4.9.0'
     def lifecycleVersion = '2.0.0'
     def roomVersion = '2.1.0-alpha07'
+    def coroutinesVersion = '1.2.1'
 
     koinDependencies = [
             rxJava: "org.koin:koin-android:${koinVersion}",
@@ -39,6 +40,11 @@ ext {
 
     roomAnnotation = [
             room: "androidx.room:room-compiler:${roomVersion}"
+    ]
+
+    coroutinesDependencies = [
+            coroutines: "org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}",
+            coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutinesVersion}"
     ]
 
     glideDependencies = [
