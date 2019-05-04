@@ -4,7 +4,7 @@ ext {
     def okHttpVersion = '3.14.1'
     def glideVersion = '4.9.0'
     def lifecycleVersion = '2.0.0'
-
+    def roomVersion = '2.1.0-alpha07'
 
     koinDependencies = [
             rxJava: "org.koin:koin-android:${koinVersion}",
@@ -26,6 +26,19 @@ ext {
 
     lifecycleAnnotation = [
             lifecycleExtensions: "androidx.lifecycle:lifecycle-compiler:${lifecycleVersion}"
+    ]
+
+    roomDependencies = [
+            room: "androidx.room:room-runtime:${roomVersion}",
+            roomWithCoroutines: "androidx.room:room-ktx:${roomVersion}"
+    ]
+
+    roomTestDependencies = [
+            room: "androidx.room:room-testing:${roomVersion}"
+    ]
+
+    roomAnnotation = [
+            room: "androidx.room:room-compiler:${roomVersion}"
     ]
 
     glideDependencies = [
