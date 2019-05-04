@@ -1,0 +1,24 @@
+ext {
+    def koinVersion = '2.0.1'
+    def retrofitVersion = '2.5.0'
+    def okHttpVersion = '3.14.1'
+    def glideVersion = '4.9.0'
+
+    koinDependencies = [
+            rxJava: "org.koin:koin-android:${koinVersion}",
+            rxKotlin: "org.koin:koin-androidx-scope:${koinVersion}",
+            rxAndroid: "org.koin:koin-androidx-viewmodel:${koinVersion}"
+    ]
+
+    networkDependencies = [
+            retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitGsonConverter: "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            retrofitRxJavaAdapter: "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}",
+            okHttp3: "com.squareup.okhttp3:okhttp:${okHttpVersion}",
+            okHttp3Logging: "com.squareup.okhttp3:logging-interceptor:${okHttpVersion}"
+    ]
+
+    glideDependencies = [
+            retrofit: "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    ]
+}
