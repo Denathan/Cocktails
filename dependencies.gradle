@@ -1,5 +1,5 @@
 ext {
-    def koinVersion = '2.0.1'
+    def koinVersion = '2.0.0-rc-2'
     def retrofitVersion = '2.5.0'
     def okHttpVersion = '3.14.1'
     def glideVersion = '4.9.0'
@@ -9,9 +9,13 @@ ext {
     def mockitoVersion = '1.10.19'
 
     koinDependencies = [
-            rxJava: "org.koin:koin-android:${koinVersion}",
-            rxKotlin: "org.koin:koin-androidx-scope:${koinVersion}",
-            rxAndroid: "org.koin:koin-androidx-viewmodel:${koinVersion}"
+            koin: "org.koin:koin-android:${koinVersion}",
+            koinScope: "org.koin:koin-androidx-scope:${koinVersion}",
+            koinViewModel: "org.koin:koin-androidx-viewmodel:${koinVersion}"
+    ]
+
+    koinTestDependencies = [
+            koin: "org.koin:koin-test:${koinVersion}"
     ]
 
     networkDependencies = [
@@ -56,7 +60,7 @@ ext {
             glide: "com.github.bumptech.glide:compiler:${glideVersion}"
     ]
 
-    mockitoDependencies = [
+    mockitoTestDependencies = [
             mockito: "org.mockito:mockito-core:${mockitoVersion}"
     ]
 }

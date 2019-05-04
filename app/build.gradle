@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply from: '../dependencies.gradle'
+
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -38,4 +40,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+
+    implementation koinDependencies.values()
+    implementation networkDependencies.values()
+    implementation lifecycleDependencies.values()
+    implementation roomDependencies.values()
+    implementation coroutinesDependencies.values()
+    implementation glideDependencies.values()
+
+    testImplementation roomTestDependencies.values()
+    testImplementation mockitoTestDependencies.values()
+    testImplementation koinTestDependencies.values()
+
+    annotationProcessor lifecycleAnnotation.values()
+    annotationProcessor roomAnnotation.values()
+    annotationProcessor glideAnnotation.values()
 }
