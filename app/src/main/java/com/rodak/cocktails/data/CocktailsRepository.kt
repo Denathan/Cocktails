@@ -8,10 +8,10 @@ import java.io.IOException
 
 class CocktailsRepository(private val api: CocktailApi) {
 
-    suspend fun getDrinks(name: String): MutableList<Drink>? {
+    suspend fun getDrinks(): MutableList<Drink>? {
 
         val cocktailsResponse = safeApiCall(
-            call = { api.getCocktailByName(name).await() },
+            call = { api.getCocktail().await() },
             errorMessage = "Error fetching cocktails"
         )
 
